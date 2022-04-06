@@ -1,0 +1,26 @@
+@import 'animate.css';
+
+//colors
+
+$color-grey-dark: #444;
+$color-grey: #555;
+$color-gray-light: #777;
+
+$color-headings: rgba(#8e806a, 1);
+
+$color-primary-light: rgba(#e4cda7, 1);
+$color-primary: rgba(#c3b091, 1);
+
+$color-background: #c9b28ad2;
+
+// fonts
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(./assets/helvetica-neu.ttf) format('tft');
+}
+
+input,
+textarea {
+  font-family: 'Helvetica Neue';
+}

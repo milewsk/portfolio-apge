@@ -1,0 +1,9 @@
+@import 'animate.css';
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url(./assets/helvetica-neu.ttf) format("tft");
+}
+input,
+textarea {
+  font-family: "Helvetica Neue";
+}/*# sourceMappingURL=App.css.map */
