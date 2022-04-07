@@ -8,7 +8,30 @@ const NavigationBar = () => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false)
   const [isDestopNavOpen, setDesktopNavOpen] = useState(false)
 
-  useEffect(() => {}, [])
+  // first render
+  useEffect(() => {
+    if (window.innerWidth > 767) {
+      setDesktopNavOpen(true)
+    } else {
+      setMobileNavOpen(true)
+    }
+  }, [])
+
+  // tracking window.innerWidth
+  useEffect(() => {
+    const checkViewportWidth = (element) => {
+      if (isMobileNavOpen && window.innerWidth > 767) {
+        setMobileNavOpen(false)
+        setDesktopNavOpen(true)
+      }
+    }
+
+    window.addEventListener('resize', checkViewportWidth)
+
+    return () => {
+      window.removeEventListener('resize', checkViewportWidth)
+    }
+  }, [])
 
   return (
     <div className="navigation-bar">
