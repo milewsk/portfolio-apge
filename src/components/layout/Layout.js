@@ -1,11 +1,11 @@
 import { Fragment } from 'react'
 import '../../sass/layout/layout.scss'
-import Navigation from './Navigation'
+import NavigationBar from '../navigation/NavigationBar'
 
 const Layout = () => {
   return (
     <Fragment>
-      <Navigation></Navigation>
+      <NavigationBar></NavigationBar>
     </Fragment>
   )
 }
