@@ -2,9 +2,14 @@ import { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../../sass/components/navigation/mobile-nav.scss'
 import my_logo from '../../img/logo/main-logo.png'
+import classNames from 'classnames'
 
 const MobileNavigation = () => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false)
+
+  const active = classNames('navigation-mobile__menu', {
+    'navigation-mobile__menu--open': isMobileNavOpen,
+  })
 
   // reverse state
   const openMobileNavHandler = () => {
@@ -26,7 +31,7 @@ const MobileNavigation = () => {
         <button
           aria-label="Toggle Mobile Menu Button"
           onClick={openMobileNavHandler}
-          className=""
+          className={active}
         >
           <span className="hm-bar hm-bar-one"></span>
           <span className="hm-bar hm-bar-two"></span>
