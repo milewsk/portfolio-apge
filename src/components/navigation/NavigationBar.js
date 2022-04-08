@@ -1,6 +1,6 @@
 import '../../sass/layout/navigation-bar.scss'
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import MobileNavigation from './MobileNavigation'
 import DesktopNavigation from './DesktopNavigation'
 
@@ -20,9 +20,12 @@ const NavigationBar = () => {
   // tracking window.innerWidth
   useEffect(() => {
     const checkViewportWidth = (element) => {
-      if (isMobileNavOpen && window.innerWidth > 767) {
+      if (window.innerWidth > 767) {
         setMobileNavOpen(false)
         setDesktopNavOpen(true)
+      } else {
+        setDesktopNavOpen(false)
+        setMobileNavOpen(true)
       }
     }
 
@@ -34,13 +37,10 @@ const NavigationBar = () => {
   }, [])
 
   return (
-    <div className="navigation-bar">
-      <Link className="navigation__logo-box" to="/">
-        <img src="" alt="My Logo"></img>
-      </Link>
+    <Fragment>
       {isMobileNavOpen && <MobileNavigation></MobileNavigation>}
       {isDestopNavOpen && <DesktopNavigation></DesktopNavigation>}
-    </div>
+    </Fragment>
   )
 }
 

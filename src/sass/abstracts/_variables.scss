@@ -1,0 +1,23 @@
+//colors
+
+$color-dark: #000;
+
+$color-grey-dark: #444;
+$color-grey: #555;
+$color-gray-light: #777;
+
+// $color-headings: rgba(#8e806a, 1);
+$color-headings: rgba(#70634d, 1);
+
+$color-primary-light: rgba(#e4cda7, 1);
+// $color-primary: rgba(#c3b091, 1);
+$color-primary: rgba(#a79476, 1);
+
+// $color-background: #c9b28ad2;
+$color-background: #d1c4afd2;
+
+$color-background2: linear-gradient(
+  100deg,
+  rgba($color-primary-light, 0.8),
+  rgba($color-primary, 0.8)
+); ;
