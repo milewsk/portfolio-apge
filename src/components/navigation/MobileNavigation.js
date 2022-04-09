@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import '../../sass/components/navigation/mobile-nav.scss'
 import my_logo from '../../img/logo/main-logo.png'
 import classNames from 'classnames'
+import MoblieLinks from './MobileLinks'
 
 const MobileNavigation = () => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false)
@@ -38,6 +39,7 @@ const MobileNavigation = () => {
           <span className=" hm-bar hm-bar-three"></span>
         </button>
       </div>
+      <MoblieLinks open={isMobileNavOpen}></MoblieLinks>
     </Fragment>
   )
 }

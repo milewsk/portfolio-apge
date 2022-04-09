@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../sass/layout/navigation-bar.css"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEF;EACE;;;AACD","file":"navigation-bar.css"}
+{"version":3,"sourceRoot":"","sources":["../../sass/layout/navigation-bar.scss","../../sass/abstracts/_variables.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EAEA;EACA;EACA;EAEA,kBCDc;EDEd;;AAEA;EACE","file":"navigation-bar.css"}
