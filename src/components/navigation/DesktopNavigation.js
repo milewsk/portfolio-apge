@@ -1,8 +1,10 @@
 import { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { faHome, faUser } from '@fortawesome/free-solid-svg-icons'
 import '../../sass/components/navigation/desktop-nav.scss'
 import my_logo from '../../img/logo/main-logo.png'
 import classNames from 'classnames'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const DesktopNavigation = () => {
   return (
@@ -16,20 +18,19 @@ const DesktopNavigation = () => {
           ></img>
         </Link>
       </div>
-      <ul className="navigation-desktop__list">
-        <li className="navigation-desktop__item">
-          <Link to="">Start</Link>
-        </li>
-        <li className="navigation-desktop__item">
-          <Link to="">About me</Link>
-        </li>
-        <li className="navigation-desktop__item">
-          <Link to="">Projects</Link>
-        </li>
-        <li className="navigation-desktop__item">
-          <Link to="">Contact me</Link>
-        </li>
-      </ul>
+      <nav className="navigation-desktop__list">
+        <Link to="" className="link-home">
+          <FontAwesomeIcon icon={faHome} color="#4d4d4e"></FontAwesomeIcon>
+        </Link>
+
+        <Link to="">
+          <FontAwesomeIcon icon={faUser} color="#4d4d4e"></FontAwesomeIcon>
+        </Link>
+
+        <Link to="">Projects</Link>
+
+        <Link to="">Contact me</Link>
+      </nav>
     </header>
   )
 }
