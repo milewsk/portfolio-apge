@@ -1,0 +1,63 @@
+@import '../../abstracts/variables';
+
+.navigation-desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 15vh;
+  z-index: 10;
+
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+
+  background-color: $color-primary;
+  // border-bottom: 1px solid rgba($color-grey, 0.15);
+
+  font-size: 2rem;
+
+  &__logo-box {
+    margin-left: 4rem;
+    & > a {
+      text-decoration: none;
+      color: $color-headings;
+      font-weight: 700;
+
+      overflow: hidden;
+    }
+  }
+
+  &__logo {
+    text-align: center;
+    width: 16vh;
+    height: 16vh;
+  }
+
+  &__list {
+    margin: 0 4rem 0 0;
+
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-around;
+    align-items: center;
+
+    list-style: none;
+  }
+
+  &__item {
+    text-transform: uppercase;
+
+    a {
+      font-size: inherit;
+      font-weight: 600;
+      font-family: inherit;
+
+      text-decoration: none;
+      cursor: pointer;
+      color: white;
+    }
+  }
+}
