@@ -45,24 +45,23 @@
     align-items: center;
 
     list-style: none;
-    text-transform: uppercase;
 
     a {
       position: relative;
 
       margin: 0 1rem;
       padding: 3rem;
-      font-size: 2rem;
+      font-size: 2.4rem;
       font-weight: 600;
       font-family: inherit;
 
       text-decoration: none;
       cursor: pointer;
-      color: white;
-      transition: all 0.3s ease-out;
+      color: $color-headings;
+      transition: all 0.4s ease-in-out;
 
-      i {
-        transition: all 0.3s ease-out;
+      svg {
+        transition: all 0.4s ease-in-out;
       }
 
       &:hover {
@@ -76,6 +75,7 @@
       }
       &::after {
         content: '';
+        font-size: 2rem;
         text-align: center;
         position: absolute;
         top: 50%;
@@ -83,13 +83,31 @@
         transform: translate(-50%, -50%);
 
         opacity: 0;
-        transition: all 0.3s ease-out;
+        transition: all 0.4s ease-in-out;
       }
     }
 
     a.link-home {
       &::after {
         content: 'Home';
+      }
+    }
+
+    a.link-about {
+      &::after {
+        content: 'About';
+      }
+    }
+
+    a.link-project {
+      &::after {
+        content: 'Portfolio';
+      }
+    }
+
+    a.link-contact {
+      &::after {
+        content: 'Contact';
       }
     }
   }

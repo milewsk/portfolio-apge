@@ -1,6 +1,11 @@
 import { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { faHome, faUser } from '@fortawesome/free-solid-svg-icons'
+import {
+  faDiagramProject,
+  faEnvelope,
+  faHome,
+  faUser,
+} from '@fortawesome/free-solid-svg-icons'
 import '../../sass/components/navigation/desktop-nav.scss'
 import my_logo from '../../img/logo/main-logo.png'
 import classNames from 'classnames'
@@ -23,13 +28,20 @@ const DesktopNavigation = () => {
           <FontAwesomeIcon icon={faHome} color="#4d4d4e"></FontAwesomeIcon>
         </Link>
 
-        <Link to="">
+        <Link to="" className="link-about">
           <FontAwesomeIcon icon={faUser} color="#4d4d4e"></FontAwesomeIcon>
         </Link>
 
-        <Link to="">Projects</Link>
+        <Link to="" className="link-project">
+          <FontAwesomeIcon
+            icon={faDiagramProject}
+            color="#4d4d4e"
+          ></FontAwesomeIcon>
+        </Link>
 
-        <Link to="">Contact me</Link>
+        <Link to="" className="link-contact">
+          <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e"></FontAwesomeIcon>
+        </Link>
       </nav>
     </header>
   )
