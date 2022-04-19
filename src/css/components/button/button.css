@@ -1,0 +1,16 @@
+.btn {
+  text-align: center;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.btn--small {
+  max-width: 15rem;
+  padding: 1.2rem 1rem;
+  margin: 1rem 0;
+  background-color: rgba(112, 99, 77, 0.8);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+/*# sourceMappingURL=button.css.map */

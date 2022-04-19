@@ -5,8 +5,6 @@ import my_logo from '../../img/logo/main-logo.png'
 import classNames from 'classnames'
 
 const MoblieLinks = (props) => {
-  const [isMobileNavOpen, setMobileNavOpen] = useState(false)
-
   const active = classNames('navigation-mobile__nav', {
     'navigation-mobile__nav--open': props.open,
   })
@@ -15,16 +13,16 @@ const MoblieLinks = (props) => {
     <nav className={active}>
       <ul className="navigation-mobile__list">
         <li className="navigation-mobile__item">
-          <Link to="">Start</Link>
+          <Link to="/home">Start</Link>
         </li>
         <li className="navigation-mobile__item">
-          <Link to="">About me</Link>
+          <Link to="/about">About me</Link>
         </li>
         <li className="navigation-mobile__item">
-          <Link to="">Projects</Link>
+          <Link to="/portfolio">Projects</Link>
         </li>
         <li className="navigation-mobile__item">
-          <Link to="">Contact me</Link>
+          <Link to="/contact">Contact me</Link>
         </li>
       </ul>
     </nav>

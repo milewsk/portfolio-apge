@@ -9,12 +9,10 @@ import Home from '../home/home'
 const Layout = () => {
   return (
     <Fragment>
-      <NavigationBar></NavigationBar>
       <Routes>
         <Route path="home" element={<Home></Home>}></Route>
-
-        <Route path="contact" element={<Contact></Contact>}></Route>
-        <Route path="contact" element={<Contact></Contact>}></Route>
+        <Route path="about" element={<Contact></Contact>}></Route>
+        <Route path="portfolio" element={<Contact></Contact>}></Route>
         <Route path="contact" element={<Contact></Contact>}></Route>
 
         <Route path="" element={<Home></Home>}></Route>

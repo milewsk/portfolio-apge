@@ -10,10 +10,12 @@ import classNames from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Loader from 'react-loaders'
 import '../../sass/components/home/home.scss'
+import NavigationBar from '../navigation/NavigationBar'
 
 const Home = () => {
   return (
     <Fragment>
+      <NavigationBar></NavigationBar>
       <section className="section-home">Cześć tu kontakty</section>
       <Loader type="cube-transition"></Loader>
     </Fragment>
