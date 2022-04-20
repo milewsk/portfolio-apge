@@ -25,22 +25,35 @@ const Contact = () => {
             projects let me know. Send me an email right now.
           </p>
           <form className="section-contact__form">
+            <input
+              className="form__input"
+              placeholder="Your email"
+              id="email"
+              type="email"
+            ></input>
             <label className="form__label" htmlFor="">
               Your email
             </label>
-            <input className="form__input" id="email" type="email"></input>
+
+            <input
+              className="form__input"
+              placeholder="Title"
+              id="title"
+              type="text"
+            ></input>
             <label className="form__label" htmlFor="title">
               Title
             </label>
-            <input className="form__input" id="title" type="text"></input>
-            <label className="form__label">Message</label>
             <textarea
               placeholder="Type your message here.."
               className="form__text-area"
             ></textarea>
-            <button type="submit" className=" btn btn--small">
-              Send email
-            </button>
+            <div className="flexbox__center">
+              {' '}
+              <button type="submit" className=" btn btn--small">
+                Send email
+              </button>
+            </div>
           </form>
         </div>
       </section>

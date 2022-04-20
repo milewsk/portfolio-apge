@@ -24,22 +24,22 @@ const DesktopNavigation = () => {
         </Link>
       </div>
       <nav className="navigation-desktop__list">
-        <Link to="home" className="link-home">
+        <Link to="/home" className="link-home">
           <FontAwesomeIcon icon={faHome} color="#4d4d4e"></FontAwesomeIcon>
         </Link>
 
-        <Link to="about" className="link-about">
+        <Link to="/about" className="link-about">
           <FontAwesomeIcon icon={faUser} color="#4d4d4e"></FontAwesomeIcon>
         </Link>
 
-        <Link to="portfolio" className="link-project">
+        <Link to="/portfolio" className="link-project">
           <FontAwesomeIcon
             icon={faDiagramProject}
             color="#4d4d4e"
           ></FontAwesomeIcon>
         </Link>
 
-        <Link to="contact" className="link-contact">
+        <Link to="/contact" className="link-contact">
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e"></FontAwesomeIcon>
         </Link>
       </nav>
