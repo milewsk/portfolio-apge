@@ -128,10 +128,8 @@
         ),
         url('../../../img/mail.jpg');
 
-      background-size: 100%;
+      background-size: cover;
       border-radius: 3px;
-
-      object-fit: fill;
 
       color: rgba($color-white, 0.8);
     }

@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   faDiagramProject,
@@ -12,8 +12,37 @@ import Loader from 'react-loaders'
 import '../../sass/components/contact/contact.scss'
 import '../../sass/components/button/button.scss'
 import NavigationBar from '../navigation/NavigationBar'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  const formRef = useRef()
+
+  const submitContactForm = (event) => {
+    event.preventDefault()
+    console.log(formRef.current.user_email.value)
+    if (
+      formRef.current.message.length < 400 &&
+      formRef.current.message.length > 0
+    ) {
+    }
+    emailjs
+      .sendForm(
+        'contact_service',
+        'contact_form',
+        formRef.current,
+        'I2y573r6FMEwUOse9'
+      )
+      .then((result) => {
+        formRef.current.message.value = ''
+        formRef.current.user_email.value = ''
+        formRef.current.user_title.value = ''
+        console.log(result)
+      })
+      .catch((error) => {
+        console.log(error.message)
+      })
+  }
+
   return (
     <Fragment>
       <NavigationBar></NavigationBar>
@@ -24,8 +53,13 @@ const Contact = () => {
             If u have any questions, job offer or you just wanna talk about my
             projects let me know. Send me an email right now.
           </p>
-          <form className="section-contact__form">
+          <form
+            onSubmit={submitContactForm}
+            ref={formRef}
+            className="section-contact__form"
+          >
             <input
+              name="user_email"
               className="form__input"
               placeholder="Your email"
               id="email"
@@ -36,6 +70,7 @@ const Contact = () => {
             </label>
 
             <input
+              name="user_title"
               className="form__input"
               placeholder="Title"
               id="title"
@@ -45,11 +80,11 @@ const Contact = () => {
               Title
             </label>
             <textarea
+              name="message"
               placeholder="Type your message here.."
               className="form__text-area"
             ></textarea>
             <div className="flexbox__center">
-              {' '}
               <button type="submit" className=" btn btn--small">
                 Send email
               </button>
