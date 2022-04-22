@@ -1,0 +1,18 @@
+.navigation-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 15vh;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #a79476;
+  border-bottom: 1px solid rgba(85, 85, 85, 0.15);
+}
+.navigation-bar * {
+  padding: 1rem 1rem;
+}
+
+/*# sourceMappingURL=navigation-bar.css.map */
