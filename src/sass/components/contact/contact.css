@@ -1,22 +1,16 @@
 :root {
   --green-light: hsl(123deg, 47%, 74%);
   --green-dark: #53c158;
-  --blue-react-light: hsl(210deg, 43%, 63%);
-  --blue-react-dark: #3f6e9d;
-  --blue-linkedin-light: hsl(210deg, 40%, 51%);
-  --blue-linkedin-dark: #2f4f6f;
-  --blue-css-light: hsl(210deg, 70%, 52%);
-  --blue-css-dark: #18528b;
-  --orange-light: hsl(34deg, 58%, 60%);
-  --orange-dark: #a16e2b;
-  --purple-light: hsl(271deg, 56%, 68%);
-  --purple-dark: #7d36bf;
+  --blue-light: hsl(210deg, 47%, 74%);
+  --blue-dark: #538ac1;
+  --orange-light: hsl(34deg, 93%, 77%);
+  --orange-dark: #f79f2b;
+  --purple-light: hsl(231deg, 44%, 76%);
+  --purple-dark: #5d6cc0;
   --yellow-light: hsl(54deg, 76%, 79%);
   --yellow-dark: #e6d647;
-  --red-light: hsl(0deg, 57%, 63%);
-  --red-dark: #ac2f2f;
-  --red-sass-light: hsl(0deg, 63%, 30%);
-  --red-sass-dark: #2a0909;
+  --red-light: hsl(0deg, 58%, 76%);
+  --red-dark: #d04e4e;
 }
 
 .section-contact {
@@ -28,8 +22,10 @@
   transition: 0.3s all;
   opacity: 0;
   transform-style: preserve-3d;
-  animation: fadeIn 1s forwards;
-  animation-delay: 1s;
+  -webkit-animation: fadeIn 1s forwards;
+          animation: fadeIn 1s forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 .section-contact__box {
   width: 80%;
@@ -48,13 +44,11 @@
   content: "";
   width: 80%;
   height: 0.15rem;
-  background-color: #dfbc20;
+  background-color: #70634d;
 }
 .section-contact__description {
   font-size: 1.5rem;
   padding: 0rem 2rem 1rem 0;
-  color: rgba(240, 233, 233, 0.952);
-  line-height: 1.4;
 }
 .section-contact__form {
   width: 100%;
@@ -78,15 +72,23 @@
 .section-contact__form .form__input:focus, .section-contact__form .form__input:active {
   border: none;
 }
+.section-contact__form .form__input:-moz-placeholder-shown + .form__label {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-2.8rem);
+}
+.section-contact__form .form__input:-ms-input-placeholder + .form__label {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-2.8rem);
+}
 .section-contact__form .form__input:placeholder-shown + .form__label {
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-3rem);
+  transform: translateY(-2.8rem);
 }
 .section-contact__form .form__label {
   font-size: 1.7rem;
-  font-weight: 600;
-  color: #b99c1c;
   font-family: inherit;
   padding: 0.6rem;
   transition: all 0.5s;
@@ -116,7 +118,7 @@
     padding: 2rem 4rem;
     align-items: flex-start;
     transform: translateY(6vh);
-    background-image: linear-gradient(105deg, #131a25 0%, rgba(19, 26, 37, 0.6) 50%, transparent 50%), url("../../../img/mail.jpg");
+    background-image: linear-gradient(105deg, black 0%, rgba(0, 0, 0, 0.6) 50%, transparent 50%), url("../../../img/mail.jpg");
     background-size: cover;
     border-radius: 3px;
     color: rgba(255, 255, 255, 0.8);
@@ -152,6 +154,16 @@
     font-family: inherit;
     transition: all 0.3s linear;
   }
+  .section-contact__form .form__input:-moz-placeholder-shown + .form__label {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-2.8rem);
+  }
+  .section-contact__form .form__input:-ms-input-placeholder + .form__label {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-2.8rem);
+  }
   .section-contact__form .form__input:placeholder-shown + .form__label {
     visibility: hidden;
     opacity: 0;
@@ -177,6 +189,4 @@
     align-items: center;
     margin: 1rem 0 0 0;
   }
-}
-
-/*# sourceMappingURL=contact.css.map */
+}/*# sourceMappingURL=contact.css.map */

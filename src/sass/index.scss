@@ -1,5 +1,9 @@
-@import './sass/abstracts/variables';
-@import '~loaders.css/src/animations/cube-transition.scss';
+@use 'sass:color';
+
+@import './abstracts/variables';
+@import '../../node_modules/loaders.css/src/animations/cube-transition.scss';
+
+//colors
 
 .loader-active {
   display: block;
@@ -35,7 +39,7 @@ body {
 
   font-family: 'Helvetica Neue', sans-serif;
   color: $color-headings;
-  background-image: $color-background2;
+  background-color: $color-background;
 
   overflow: hidden;
 
@@ -46,4 +50,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  @each $name, $value in $colors-circle {
+    --#{$name}-light: #{$value};
+    --#{$name}-dark: #{color.adjust($value, $lightness: -20%)};
+  }
 }

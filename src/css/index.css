@@ -1,0 +1,116 @@
+:root {
+  --green-light: hsl(123deg, 47%, 74%);
+  --green-dark: #53c158;
+  --blue-react-light: hsl(210deg, 43%, 63%);
+  --blue-react-dark: #3f6e9d;
+  --blue-linkedin-light: hsl(210deg, 40%, 51%);
+  --blue-linkedin-dark: #2f4f6f;
+  --blue-css-light: hsl(210deg, 70%, 52%);
+  --blue-css-dark: #18528b;
+  --orange-light: hsl(34deg, 58%, 60%);
+  --orange-dark: #a16e2b;
+  --purple-light: hsl(271deg, 56%, 68%);
+  --purple-dark: #7d36bf;
+  --yellow-light: hsl(54deg, 76%, 79%);
+  --yellow-dark: #e6d647;
+  --red-light: hsl(0deg, 57%, 63%);
+  --red-dark: #ac2f2f;
+  --red-sass-light: hsl(0deg, 63%, 30%);
+  --red-sass-dark: #2a0909;
+}
+
+@keyframes cube-transition {
+  25% {
+    transform: translateX(50px) scale(0.5) rotate(-90deg);
+  }
+  50% {
+    transform: translate(50px, 50px) rotate(-180deg);
+  }
+  75% {
+    transform: translateY(50px) scale(0.5) rotate(-270deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.cube-transition {
+  position: relative;
+  transform: translate(-25px, -25px);
+}
+.cube-transition > div {
+  animation-fill-mode: both;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  background-color: #fff;
+  animation: cube-transition 1.6s 0s infinite ease-in-out;
+}
+.cube-transition > div:last-child {
+  animation-delay: -0.8s;
+}
+
+.loader-active {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeOut 1s 1s;
+  animation-fill-mode: forwards;
+}
+
+.loader-hidden {
+  display: none;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #dfbc20;
+  background-color: rgba(19, 26, 37, 0.989);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+:root {
+  --green-light: hsl(123deg, 47%, 74%);
+  --green-dark: #53c158;
+  --blue-react-light: hsl(210deg, 43%, 63%);
+  --blue-react-dark: #3f6e9d;
+  --blue-linkedin-light: hsl(210deg, 40%, 51%);
+  --blue-linkedin-dark: #2f4f6f;
+  --blue-css-light: hsl(210deg, 70%, 52%);
+  --blue-css-dark: #18528b;
+  --orange-light: hsl(34deg, 58%, 60%);
+  --orange-dark: #a16e2b;
+  --purple-light: hsl(271deg, 56%, 68%);
+  --purple-dark: #7d36bf;
+  --yellow-light: hsl(54deg, 76%, 79%);
+  --yellow-dark: #e6d647;
+  --red-light: hsl(0deg, 57%, 63%);
+  --red-dark: #ac2f2f;
+  --red-sass-light: hsl(0deg, 63%, 30%);
+  --red-sass-dark: #2a0909;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,37 @@
+:root {
+  --green-light: hsl(123deg, 47%, 74%);
+  --green-dark: #53c158;
+  --blue-light: hsl(210deg, 47%, 74%);
+  --blue-dark: #538ac1;
+  --orange-light: hsl(34deg, 93%, 77%);
+  --orange-dark: #f79f2b;
+  --purple-light: hsl(231deg, 44%, 76%);
+  --purple-dark: #5d6cc0;
+  --yellow-light: hsl(54deg, 76%, 79%);
+  --yellow-dark: #e6d647;
+  --red-light: hsl(0deg, 58%, 76%);
+  --red-dark: #d04e4e;
+}
+
+.btn {
+  text-align: center;
+  color: white;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn--small {
+  width: 15rem;
+  padding: 1.2rem 1rem;
+  margin: 1rem 0;
+  background-color: rgba(112, 99, 77, 0.8);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.btn--small:hover, .btn--small:active {
+  transform: translateY(-0.5rem) scale(1.05);
+  background-color: #70634d;
+}/*# sourceMappingURL=button.css.map */

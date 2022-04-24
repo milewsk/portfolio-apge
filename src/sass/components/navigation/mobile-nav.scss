@@ -13,8 +13,9 @@
   align-items: center;
   justify-content: space-between;
 
-  background-color: $color-primary;
-  // border-bottom: 1px solid rgba($color-grey, 0.15);
+  background-color: $color-background;
+
+  overflow: hidden;
 
   font-size: 2rem;
 
@@ -25,15 +26,20 @@
   &__logo-box {
     & > a {
       text-decoration: none;
-      color: $color-headings;
-      font-weight: 600;
+      color: white;
+
+      img {
+        filter: invert(100%);
+      }
     }
   }
 
   &__logo {
     text-align: center;
-    width: 10vh;
-    height: 10vh;
+    width: 13vh;
+    height: 13vh;
+
+    filter: invert(100%);
   }
 
   &__background {
@@ -68,7 +74,7 @@
       height: 0.3rem;
       margin: 0.2rem;
 
-      background-color: $color-grey-dark;
+      background-color: rgba($color-white, $alpha: 0.9);
       border-radius: 10px;
 
       transition: all 0.3s linear;
