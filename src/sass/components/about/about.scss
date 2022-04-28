@@ -1,9 +1,36 @@
-.section-contact {
-  width: 100vh;
-  height: 100vh;
-  margin: 15vh;
+@import '../../abstracts/variables';
+
+.section-about {
+  margin: 10vh 2rem 5vh 2rem;
+  padding-top: 3rem;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  opacity: 0;
+
+  animation: fadeIn 1s forwards;
+  animation-duration: 3s;
+  animation-delay: 1s;
+
+  &__header {
+    font-family: inherit;
+    font-size: 3rem;
+  }
+
+  &__article {
+  }
+
+  .article {
+    &__header {
+    }
+
+    &__header--sub {
+    }
+
+    &__paragraf {
+    }
+  }
 }
