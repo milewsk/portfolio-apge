@@ -10,6 +10,7 @@
     width: 100vw;
     height: 0%;
     opacity: 0;
+    visibility: hidden;
 
     display: flex;
     flex: 1 1 auto;
@@ -23,6 +24,7 @@
     &--open {
       height: 100vh;
       opacity: 1;
+      visibility: visible;
     }
   }
 
