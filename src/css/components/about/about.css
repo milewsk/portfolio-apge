@@ -1,12 +1,68 @@
-.section-contact {
-  width: 100vh;
-  height: 100vh;
-  margin: 15vh;
+:root {
+  --green-light: hsl(123deg, 47%, 74%);
+  --green-dark: #53c158;
+  --blue-react-light: hsl(210deg, 43%, 63%);
+  --blue-react-dark: #3f6e9d;
+  --blue-linkedin-light: hsl(210deg, 40%, 51%);
+  --blue-linkedin-dark: #2f4f6f;
+  --blue-css-light: hsl(210deg, 70%, 52%);
+  --blue-css-dark: #18528b;
+  --orange-light: hsl(34deg, 58%, 60%);
+  --orange-dark: #a16e2b;
+  --purple-light: hsl(271deg, 56%, 68%);
+  --purple-dark: #7d36bf;
+  --yellow-light: hsl(54deg, 76%, 79%);
+  --yellow-dark: #e6d647;
+  --red-light: hsl(0deg, 57%, 63%);
+  --red-dark: #ac2f2f;
+  --red-sass-light: hsl(0deg, 63%, 30%);
+  --red-sass-dark: #2a0909;
+}
+
+.section-about {
+  max-height: 100%;
+  margin: 10vh 2rem 5vh 2rem;
+  padding-top: 3rem;
+  color: #fff;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+.section-about__header {
+  font-family: inherit;
+  font-size: 3.4rem;
+  padding: 2rem 0;
+}
+.section-about__article {
+  padding: 2rem 0;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-/*# sourceMappingURL=about.css.map */
+.section-about .article__header {
+  padding: 2rem 0 1rem 0;
+  font-size: 2.5rem;
+}
+.section-about .article__header--sub {
+  padding: 2rem 0 1rem 0;
+  font-size: 2.2rem;
+}
+.section-about .article__paragraf {
+  padding: 0.5rem 0.5rem;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+}
 
 /*# sourceMappingURL=about.css.map */

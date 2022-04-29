@@ -27,6 +27,7 @@
   width: 100vw;
   height: 0%;
   opacity: 0;
+  visibility: hidden;
   display: flex;
   flex: 1 1 auto;
   justify-content: center;
@@ -37,6 +38,7 @@
 .navigation-mobile__nav--open {
   height: 100vh;
   opacity: 1;
+  visibility: visible;
 }
 .navigation-mobile__list {
   display: flex;

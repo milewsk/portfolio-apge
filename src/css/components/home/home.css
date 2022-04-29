@@ -1,3 +1,4 @@
+@import 'animate.css';
 :root {
   --green-light: hsl(123deg, 47%, 74%);
   --green-dark: #53c158;
@@ -100,6 +101,9 @@
   align-self: center;
   grid-row: 1/2;
   grid-column: 2/4;
+  animation: fadeIn;
+  animation-delay: 1s;
+  animation-duration: 4s;
 }
 .section-home .orbit__img--center {
   position: relative;
@@ -200,6 +204,17 @@
   grid-row: 2/3;
   grid-column: 1/4;
 }
+.section-home__header h1 {
+  animation: fadeIn;
+  animation-delay: 1s;
+  animation-duration: 2.5s;
+}
+.section-home__header h3,
+.section-home__header h5 {
+  animation: fadeIn;
+  animation-delay: 1s;
+  animation-duration: 4s;
+}
 
 @media screen and (min-width: 768px) {
   .section-home .orbit__img--center {
@@ -246,12 +261,15 @@
 }
 @keyframes orbit {
   100% {
-    rotate: 1turn;
+    translate: rotate(90deg);
+  }
+  0% {
+    translate: rotate(0deg);
   }
 }
 @keyframes hold-position {
   100% {
-    rotate: -1turn;
+    translate: rotate(-90deg);
   }
 }
 
