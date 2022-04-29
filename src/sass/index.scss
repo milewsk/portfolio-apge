@@ -1,0 +1,60 @@
+@use 'sass:color';
+
+@import './abstracts/variables';
+@import '../../node_modules/loaders.css/src/animations/cube-transition.scss';
+
+//colors
+
+.loader-active {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  animation: fadeOut 1s 1s;
+  //animation-fill-mode: both;
+  animation-fill-mode: forwards;
+}
+.loader-hidden {
+  display: none;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+
+  font-family: 'Helvetica Neue', sans-serif;
+  color: $color-headings;
+  background-color: $color-background;
+
+  overflow: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  @each $name, $value in $colors-circle {
+    --#{$name}-light: #{$value};
+    --#{$name}-dark: #{color.adjust($value, $lightness: -20%)};
+  }
+}

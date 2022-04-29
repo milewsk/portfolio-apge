@@ -1,0 +1,105 @@
+:root {
+  --green-light: hsl(123deg, 47%, 74%);
+  --green-dark: #53c158;
+  --blue-react-light: hsl(210deg, 43%, 63%);
+  --blue-react-dark: #3f6e9d;
+  --blue-linkedin-light: hsl(210deg, 40%, 51%);
+  --blue-linkedin-dark: #2f4f6f;
+  --blue-css-light: hsl(210deg, 70%, 52%);
+  --blue-css-dark: #18528b;
+  --orange-light: hsl(34deg, 58%, 60%);
+  --orange-dark: #a16e2b;
+  --purple-light: hsl(271deg, 56%, 68%);
+  --purple-dark: #7d36bf;
+  --yellow-light: hsl(54deg, 76%, 79%);
+  --yellow-dark: #e6d647;
+  --red-light: hsl(0deg, 57%, 63%);
+  --red-dark: #ac2f2f;
+  --red-sass-light: hsl(0deg, 63%, 30%);
+  --red-sass-dark: #2a0909;
+}
+
+.navigation-desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 13vh;
+  z-index: 10;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: rgba(19, 26, 37, 0.992);
+  font-size: 2rem;
+}
+.navigation-desktop__logo-box {
+  margin-left: 4rem;
+}
+.navigation-desktop__logo-box > a {
+  text-decoration: none;
+  font-weight: 700;
+  overflow: hidden;
+}
+.navigation-desktop__logo {
+  text-align: center;
+  width: 20vh;
+  height: 20vh;
+  filter: invert(100%);
+}
+.navigation-desktop__list {
+  margin: 0 4rem 0 0;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+.navigation-desktop__list a {
+  position: relative;
+  margin: 0 1rem;
+  padding: 3rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  color: #dfbc20;
+  transition: all 0.4s ease-in-out;
+}
+.navigation-desktop__list a svg {
+  transition: all 0.4s ease-in-out;
+  filter: invert(80%);
+}
+.navigation-desktop__list a:hover svg {
+  opacity: 0;
+}
+.navigation-desktop__list a:hover::after {
+  opacity: 1;
+}
+.navigation-desktop__list a::after {
+  content: "";
+  font-size: 2rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.navigation-desktop__list a.link-home::after {
+  content: "Home";
+}
+.navigation-desktop__list a.link-about::after {
+  content: "About";
+}
+.navigation-desktop__list a.link-project::after {
+  content: "Portfolio";
+}
+.navigation-desktop__list a.link-contact::after {
+  content: "Contact";
+}
+
+/*# sourceMappingURL=desktop-nav.css.map */
