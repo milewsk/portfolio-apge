@@ -1,4 +1,4 @@
-:root {
+C:root {
   --green-light: hsl(123deg, 47%, 74%);
   --green-dark: #53c158;
   --blue-react-light: hsl(210deg, 43%, 63%);
@@ -37,7 +37,8 @@
   font-size: 1.7rem;
   font-weight: 600;
 }
-.btn--small:hover, .btn--small:active {
+.btn--small:hover,
+.btn--small:active {
   transform: translateY(-0.5rem) scale(1.05);
   background-color: #dfbc20;
 }
