@@ -1,3 +1,18 @@
+.flex-col__center-item {
+  justify-self: center;
+  align-self: center;
+}
+
+.flex-col__right-item {
+  justify-self: center;
+  align-self: flex-end;
+}
+
+.flex-col__left-item {
+  justify-self: center;
+  align-self: flex-start;
+}
+
 .section-about {
   max-height: 100%;
   margin: 10vh 2rem 5vh 2rem;
@@ -23,8 +38,8 @@
   line-height: 1.2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: flex-start;
 }
 .section-about .article__header {
   padding: 2rem 0 1rem 0;
@@ -34,14 +49,39 @@
   padding: 2rem 0 1rem 0;
   font-size: 2.2rem;
 }
+.section-about .article__header::after, .section-about .article__header--sub::after {
+  display: block;
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: #b99c1c;
+}
 .section-about .article__paragraf {
-  padding: 0.5rem 0.5rem;
-  color: #fff;
-  text-align: center;
+  padding: 0.5rem 0rem 2.5rem 0rem;
+  color: rgba(240, 233, 233, 0.952);
   font-size: 1.8rem;
   line-height: 1.5;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  .section-about {
+    max-height: 80vh;
+    display: grid;
+    grid-template-rows: 0.5fr 4fr 4fr;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-areas: "header header header header" "ar1 ar1 ar2 ar2" "ar1 ar1 ar2 ar2";
+    gap: 2rem 4rem;
+  }
+  .section-about__header {
+    grid-area: header;
+  }
+  .section-about .article--1 {
+    grid-area: ar1;
+    align-self: center;
+    justify-self: center;
+  }
 }
 
 /*# sourceMappingURL=about.css.map */

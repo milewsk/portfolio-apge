@@ -18,7 +18,7 @@ const About = () => {
       <NavigationBar></NavigationBar>
       <section className="section-about">
         <h2 className="section-about__header">Know me better</h2>
-        <article className="section-about__article">
+        <article className="section-about__article article--1">
           <h3 className="article__header">Who am I?</h3>
           <p className="article__paragraf">
             Hello my name is Konrad and I'm a computer science and econometrics
@@ -35,8 +35,8 @@ const About = () => {
             programing.
           </p>
         </article>
-        <article className="section-about__article">
-          <h3 className="article__header">My technological stack</h3>
+        <article className="section-about__article article--2">
+          <h3 className="article__header ">My technological stack</h3>
           <p className="article__paragraf">
             Mostly, I'm into creating web pages and making mockups. Slowly but
             surely I'm trying to write more clean code and discover new usefull

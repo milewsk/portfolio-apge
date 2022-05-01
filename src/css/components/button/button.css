@@ -1,3 +1,18 @@
+.flex-col__center-item {
+  justify-self: center;
+  align-self: center;
+}
+
+.flex-col__right-item {
+  justify-self: center;
+  align-self: flex-end;
+}
+
+.flex-col__left-item {
+  justify-self: center;
+  align-self: flex-start;
+}
+
 .btn {
   text-align: center;
   color: white;
