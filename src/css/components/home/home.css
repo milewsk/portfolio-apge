@@ -1,46 +1,4 @@
 @import 'animate.css';
-:root {
-  --green-light: hsl(123deg, 47%, 74%);
-  --green-dark: #53c158;
-  --blue-react-light: hsl(210deg, 43%, 63%);
-  --blue-react-dark: #3f6e9d;
-  --blue-linkedin-light: hsl(210deg, 40%, 51%);
-  --blue-linkedin-dark: #2f4f6f;
-  --blue-css-light: hsl(210deg, 70%, 52%);
-  --blue-css-dark: #18528b;
-  --orange-light: hsl(34deg, 58%, 60%);
-  --orange-dark: #a16e2b;
-  --purple-light: hsl(271deg, 56%, 68%);
-  --purple-dark: #7d36bf;
-  --yellow-light: hsl(54deg, 76%, 79%);
-  --yellow-dark: #e6d647;
-  --red-light: hsl(0deg, 57%, 63%);
-  --red-dark: #ac2f2f;
-  --red-sass-light: hsl(0deg, 63%, 30%);
-  --red-sass-dark: #2a0909;
-}
-
-:root {
-  --green-light: hsl(123deg, 47%, 74%);
-  --green-dark: #53c158;
-  --blue-react-light: hsl(210deg, 43%, 63%);
-  --blue-react-dark: #3f6e9d;
-  --blue-linkedin-light: hsl(210deg, 40%, 51%);
-  --blue-linkedin-dark: #2f4f6f;
-  --blue-css-light: hsl(210deg, 70%, 52%);
-  --blue-css-dark: #18528b;
-  --orange-light: hsl(34deg, 58%, 60%);
-  --orange-dark: #a16e2b;
-  --purple-light: hsl(271deg, 56%, 68%);
-  --purple-dark: #7d36bf;
-  --yellow-light: hsl(54deg, 76%, 79%);
-  --yellow-dark: #e6d647;
-  --red-light: hsl(0deg, 57%, 63%);
-  --red-dark: #ac2f2f;
-  --red-sass-light: hsl(0deg, 63%, 30%);
-  --red-sass-dark: #2a0909;
-}
-
 .header--1 {
   font-family: inherit;
   font-weight: 700;
@@ -83,11 +41,10 @@
 }
 .section-home {
   width: 80vw;
-  height: 80vh;
-  margin: 10vh 10vw 10vh 10vw;
-  padding: 10% 0;
+  height: 70vh;
+  margin: 20vh 10vw 10vh 10vw;
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 2fr 1fr;
   grid-template-columns: repeat(3, 1fr);
   transition: all 0.3s linear;
   opacity: 0;
@@ -217,59 +174,60 @@
 }
 
 @media screen and (min-width: 768px) {
+  .section-home {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+  }
   .section-home .orbit__img--center {
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
   }
   .section-home .orbit ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-4rem, -4rem);
+    transform: translate(-3.5rem, -3.5rem);
     list-style: none;
     animation: orbit 50s linear infinite;
   }
   .section-home .orbit ul li {
-    width: 8rem;
-    height: 8rem;
+    width: 7rem;
+    height: 7rem;
     aspect-ratio: 1/1;
   }
   .section-home .orbit ul li:nth-child(1) {
-    transform: translate(16rem, 0);
+    transform: translate(12rem, 0);
   }
   .section-home .orbit ul li:nth-child(2) {
-    transform: translate(11rem, 11rem);
+    transform: translate(9rem, 9rem);
   }
   .section-home .orbit ul li:nth-child(3) {
-    transform: translate(0rem, 16rem);
+    transform: translate(0rem, 12rem);
   }
   .section-home .orbit ul li:nth-child(4) {
-    transform: translate(-11rem, 11rem);
+    transform: translate(-9rem, 9rem);
   }
   .section-home .orbit ul li:nth-child(5) {
-    transform: translate(-16rem, 0rem);
+    transform: translate(-12rem, 0rem);
   }
   .section-home .orbit ul li:nth-child(6) {
-    transform: translate(-11rem, -11rem);
+    transform: translate(-9rem, -9rem);
   }
   .section-home .orbit ul li:nth-child(7) {
-    transform: translate(0rem, -16rem);
+    transform: translate(0rem, -12rem);
   }
   .section-home .orbit ul li:nth-child(8) {
-    transform: translate(11rem, -11rem);
+    transform: translate(9rem, -9rem);
   }
 }
 @keyframes orbit {
   100% {
-    translate: rotate(90deg);
-  }
-  0% {
-    translate: rotate(0deg);
+    rotate: 1turn;
   }
 }
 @keyframes hold-position {
   100% {
-    translate: rotate(-90deg);
+    rotate: -1turn;
   }
 }
 

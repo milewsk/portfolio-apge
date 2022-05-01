@@ -1,24 +1,3 @@
-C:root {
-  --green-light: hsl(123deg, 47%, 74%);
-  --green-dark: #53c158;
-  --blue-react-light: hsl(210deg, 43%, 63%);
-  --blue-react-dark: #3f6e9d;
-  --blue-linkedin-light: hsl(210deg, 40%, 51%);
-  --blue-linkedin-dark: #2f4f6f;
-  --blue-css-light: hsl(210deg, 70%, 52%);
-  --blue-css-dark: #18528b;
-  --orange-light: hsl(34deg, 58%, 60%);
-  --orange-dark: #a16e2b;
-  --purple-light: hsl(271deg, 56%, 68%);
-  --purple-dark: #7d36bf;
-  --yellow-light: hsl(54deg, 76%, 79%);
-  --yellow-dark: #e6d647;
-  --red-light: hsl(0deg, 57%, 63%);
-  --red-dark: #ac2f2f;
-  --red-sass-light: hsl(0deg, 63%, 30%);
-  --red-sass-dark: #2a0909;
-}
-
 .btn {
   text-align: center;
   color: white;
@@ -37,8 +16,7 @@ C:root {
   font-size: 1.7rem;
   font-weight: 600;
 }
-.btn--small:hover,
-.btn--small:active {
+.btn--small:hover, .btn--small:active {
   transform: translateY(-0.5rem) scale(1.05);
   background-color: #dfbc20;
 }
