@@ -17,13 +17,13 @@ const About = () => {
     <Fragment>
       <NavigationBar></NavigationBar>
       <section className="section-about">
-        <h2 className="section-about__header">Know me better</h2>
+        <h2 className="section-about__header header--2">Know me better</h2>
         <article className="section-about__article article--1">
           <h3 className="article__header">Who am I?</h3>
           <p className="article__paragraf">
             Hello my name is Konrad and I'm a computer science and econometrics
             student at Bialystok University of Technology.<br></br> I think, my
-            friend would describe me as an outgoing, friendly person with a lot
+            friend wolid describe me as an outgoing, friendly person with a lot
             of creativity.
           </p>
           <h5 className="article__header--sub">My hobbies</h5>
@@ -36,25 +36,24 @@ const About = () => {
           </p>
         </article>
         <article className="section-about__article article--2">
-          <h3 className="article__header ">My technological stack</h3>
+          <h3 className="article__header">My technological stack</h3>
           <p className="article__paragraf">
             Mostly, I'm into creating web pages and making mockups. Slowly but
-            surely I'm trying to write more clean code and discover new usefull
+            surely I'm trying to write more clean code and discover new useflil
             features.
           </p>
           <h5 className="article__header--sub">Technologies</h5>
-          <li className="article__list">
-            <ul className="list__item">HTML</ul>
-            <ul className="list__item">CSS</ul>
-            <ul className="list__item">Sass</ul>
-            <ul className="list__item">Javascript</ul>
-            <ul className="list__item">React</ul>
-            <ul className="list__item">
+          <ul className="article__list">
+            <li className="list__item">HTML / CSS</li>
+            <li className="list__item">Sass</li>
+            <li className="list__item">JavaScript</li>
+            <li className="list__item">React</li>
+            <li className="list__item">
               SOLID, DRY, RWD (at least I'm trying...)
-            </ul>
-            <ul className="list__item">GIT, Gitflow, Jira, Sourcetree</ul>
-            <ul className="list__item">C#, ORM, Linq, SQL</ul>
-          </li>
+            </li>
+            <li className="list__item">GIT, Gitflow, Jira, Sourcetree</li>
+            <li className="list__item">C#, ORM, Linq, SQL</li>
+          </ul>
         </article>
       </section>
       <Loader type="cube-transition"></Loader>
