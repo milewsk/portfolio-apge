@@ -60,6 +60,14 @@ const Home = () => {
           </h3>
           <h1 className="header--1">Junior Frontend Developer</h1>
           <h5 className="header--5">React | JavaScript | Design</h5>
+          <div className="f-box f-box--left mg__hor--medium">
+            <button className="btn btn--small btn--transparent f-item__mg--small">
+              Learn more
+            </button>
+            <button className="btn btn--small btn--transparent ">
+              Contact
+            </button>
+          </div>
         </header>
       </section>
       <Loader type="cube-transition"></Loader>

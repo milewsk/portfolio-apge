@@ -5,3 +5,34 @@
 @mixin mg__vert--medium {
   margin: 1rem 0;
 }
+
+@mixin mg__hor--small {
+  margin: 0 1rem;
+}
+
+@mixin item--center {
+  justify-self: center;
+  align-self: center;
+}
+
+.mg__hor--medium {
+  margin: 2rem 0;
+}
+
+.f-box {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  flex-flow: wrap;
+  // flex: 1 1 auto;
+
+  &--left {
+    justify-content: flex-start;
+  }
+}
+
+.f-item {
+  &__mg--small {
+    margin: 0 2rem 0 0;
+  }
+}

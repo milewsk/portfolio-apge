@@ -9,25 +9,49 @@
   border: none;
   cursor: pointer;
 
-  transition: all 0.3s;
+  transition: all 0.4s;
 
-  &--small {
-    width: 15rem;
-    padding: 1.2rem 1rem;
-    @include mg__vert--medium;
+  &--transparent {
+    background-color: transparent;
+    border: 2px solid rgba($color-headings, 0.8);
+    color: rgba($color-headings, 0.8);
 
+    &:hover,
+    &:active {
+      transform: scale(1.03);
+      background-color: rgba($color-headings-dark, 1);
+      color: rgba($color-dark, 1);
+      border: 2px solid rgba($color-headings-dark, 1);
+      box-shadow: 0 0 1.3rem rgba($color-headings-dark, 0.8);
+    }
+  }
+
+  &-filled {
     background-color: rgba($color-headings, 0.8);
     box-shadow: 0 0.5rem 1rem rgba($color-dark, 0.15);
-
-    border-radius: 4px;
-
-    font-size: 1.7rem;
-    font-weight: 600;
 
     &:hover,
     &:active {
       transform: translateY(-0.5rem) scale(1.05);
       background-color: rgba($color-headings, 9);
+    }
+  }
+
+  &--small {
+    width: 15rem;
+    padding: 0.8rem 0rem;
+    @include mg__vert--medium;
+
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  @media screen and (min-width: 768px) {
+    &--small {
+      width: 20rem;
+      padding: 1.2rem 0;
+      font-size: 1.7rem;
     }
   }
 }
