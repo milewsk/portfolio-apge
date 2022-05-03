@@ -1,22 +1,19 @@
-C:root {
-  --green-light: hsl(123deg, 47%, 74%);
-  --green-dark: #53c158;
-  --blue-react-light: hsl(210deg, 43%, 63%);
-  --blue-react-dark: #3f6e9d;
-  --blue-linkedin-light: hsl(210deg, 40%, 51%);
-  --blue-linkedin-dark: #2f4f6f;
-  --blue-css-light: hsl(210deg, 70%, 52%);
-  --blue-css-dark: #18528b;
-  --orange-light: hsl(34deg, 58%, 60%);
-  --orange-dark: #a16e2b;
-  --purple-light: hsl(271deg, 56%, 68%);
-  --purple-dark: #7d36bf;
-  --yellow-light: hsl(54deg, 76%, 79%);
-  --yellow-dark: #e6d647;
-  --red-light: hsl(0deg, 57%, 63%);
-  --red-dark: #ac2f2f;
-  --red-sass-light: hsl(0deg, 63%, 30%);
-  --red-sass-dark: #2a0909;
+.mg__hor--medium {
+  margin: 2rem 0;
+}
+
+.f-box {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  flex-flow: wrap;
+}
+.f-box--left {
+  justify-content: flex-start;
+}
+
+.f-item__mg--small {
+  margin: 0 2rem 0 0;
 }
 
 .btn {
@@ -25,22 +22,42 @@ C:root {
   font-family: inherit;
   border: none;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.4s;
+}
+.btn--transparent {
+  background-color: transparent;
+  border: 2px solid rgba(223, 188, 32, 0.8);
+  color: rgba(223, 188, 32, 0.8);
+}
+.btn--transparent:hover, .btn--transparent:active {
+  transform: scale(1.03);
+  background-color: #b99c1c;
+  color: black;
+  border: 2px solid #b99c1c;
+  box-shadow: 0 0 1.3rem rgba(185, 156, 28, 0.8);
+}
+.btn-filled {
+  background-color: rgba(223, 188, 32, 0.8);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.btn-filled:hover, .btn-filled:active {
+  transform: translateY(-0.5rem) scale(1.05);
+  background-color: #dfbc20;
 }
 .btn--small {
   width: 15rem;
-  padding: 1.2rem 1rem;
+  padding: 0.8rem 0rem;
   margin: 1rem 0;
-  background-color: rgba(223, 188, 32, 0.8);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
-.btn--small:hover,
-.btn--small:active {
-  transform: translateY(-0.5rem) scale(1.05);
-  background-color: #dfbc20;
+@media screen and (min-width: 768px) {
+  .btn--small {
+    width: 20rem;
+    padding: 1.2rem 0;
+    font-size: 1.7rem;
+  }
 }
 
 /*# sourceMappingURL=button.css.map */

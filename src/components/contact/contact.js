@@ -85,7 +85,7 @@ const Contact = () => {
               className="form__text-area"
             ></textarea>
             <div className="flexbox__center">
-              <button type="submit" className=" btn btn--small">
+              <button type="submit" className=" btn btn--small btn-filled">
                 Send email
               </button>
             </div>

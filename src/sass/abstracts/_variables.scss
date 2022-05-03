@@ -36,10 +36,3 @@ $colors-circle: (
   'red': hsl(0, 57%, 63%),
   'red-sass': hsl(0, 63%, 30%),
 );
-
-:root {
-  @each $name, $value in $colors-circle {
-    --#{$name}-light: #{$value};
-    --#{$name}-dark: #{color.adjust($value, $lightness: -20%)};
-  }
-}

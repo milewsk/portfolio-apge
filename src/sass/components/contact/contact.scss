@@ -29,6 +29,7 @@
     font-size: 3rem;
     font-weight: 700;
     margin: 1rem 0;
+    color: $color-white;
 
     &::after {
       display: block;
@@ -206,6 +207,7 @@
         justify-content: center;
         align-items: center;
 
+        padding: 0.6rem;
         margin: 1rem 0 0 0;
       }
     }
