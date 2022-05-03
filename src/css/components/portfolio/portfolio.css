@@ -1,0 +1,121 @@
+.mg__hor--medium {
+  margin: 2rem 0;
+}
+
+.f-box {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  flex-flow: wrap;
+}
+.f-box--left {
+  justify-content: flex-start;
+}
+
+.f-item__mg--small {
+  margin: 0 2rem 0 0;
+}
+
+.header--1 {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 1rem 0;
+  text-shadow: 0.3rem 0rem 1rem rgba(240, 233, 233, 0.4);
+  line-height: 1.3;
+}
+
+.header--2 {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0.3rem 0rem 1rem rgba(240, 233, 233, 0.4);
+  line-height: 1.3;
+}
+
+.header--3 {
+  color: rgba(240, 233, 233, 0.952);
+  font-family: inherit;
+  font-size: 1.7rem;
+}
+
+.header--5 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+  font-weight: 100;
+  text-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+  color: rgba(240, 233, 233, 0.952);
+}
+
+@media screen and (min-width: 768px) {
+  .header--1 {
+    font-size: 4.5rem;
+    padding: 1rem 0;
+    line-height: 1.3;
+  }
+
+  .header--3 {
+    font-size: 3rem;
+    line-height: 1.3;
+  }
+
+  .header--5 {
+    font-size: 2.6rem;
+    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+  }
+}
+.section-portfolio {
+  max-width: 100vw;
+  margin: 10vh 0rem 0vh 0rem;
+  padding: 3rem 5rem 5vh 5rem;
+  color: #fff;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 5rem;
+  justify-items: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+.section-portfolio .card {
+  perspective: 1500rem;
+  -moz-perspective: 1500rem;
+  position: relative;
+  width: 100%;
+  height: 50rem;
+}
+.section-portfolio .card__side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50rem;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  box-shadow: 0rem 0.8rem 2rem rgba(0, 0, 0, 0.15);
+}
+.section-portfolio .card__side--front .card__title {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  padding: 1rem 2rem;
+  font-size: 2.4rem;
+  background-image: linear-gradient(130deg, rgba(19, 26, 37, 0.8) 0%, #131a25 30%, #131a25 100%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.section-portfolio .card__side--front .btn--absolute {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section-portfolio .card__side--front--1 {
+  background-image: linear-gradient(180deg, #923d3d 0%, transparent 30%, transparent 100%);
+}
+
+/*# sourceMappingURL=portfolio.css.map */

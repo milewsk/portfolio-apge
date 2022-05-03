@@ -1,0 +1,85 @@
+@import '../../abstracts/variables';
+@import '../../abstracts/ultilities';
+@import '../headers/headers.scss';
+
+.section-portfolio {
+  max-width: 100vw;
+  margin: 10vh 0rem 0vh 0rem;
+  padding: 3rem 5rem 5vh 5rem;
+  color: $color-white;
+
+  display: grid;
+  grid-auto-flow: row;
+  gap: 5rem;
+  justify-items: center;
+
+  opacity: 0;
+
+  animation: fadeIn 1s forwards;
+  animation-duration: 3s;
+  animation-delay: 1s;
+
+  .card {
+    perspective: 1500rem;
+    -moz-perspective: 1500rem;
+
+    position: relative;
+    width: 100%;
+    height: 50rem;
+
+    &__side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50rem;
+
+      transition: all 0.8s ease;
+
+      backface-visibility: hidden;
+      overflow: hidden;
+
+      border-radius: 0.3rem;
+      box-shadow: 0rem 0.8rem 2rem rgba($color-dark, 0.15);
+
+      &--front {
+        .card__title {
+          position: absolute;
+          top: 5%;
+          left: 5%;
+          padding: 1rem 2rem;
+          font-size: 2.4rem;
+
+          background-image: linear-gradient(
+            130deg,
+            rgba($color-background, 0.8) 0%,
+            rgba($color-background-nav, 1) 30%,
+            rgba($color-background-nav, 1) 100%
+          );
+
+          -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+        }
+
+        .card__description {
+        }
+
+        .btn--absolute {
+          position: absolute;
+          top: 80%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &--1 {
+          background-image: linear-gradient(
+            180deg,
+            rgba(rgb(146, 61, 61), 1) 0%,
+            transparent 30%,
+            transparent 100%
+          );
+        }
+      }
+    }
+  }
+}
