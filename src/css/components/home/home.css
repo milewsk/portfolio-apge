@@ -1,4 +1,22 @@
 @import 'animate.css';
+.mg__hor--medium {
+  margin: 2rem 0;
+}
+
+.f-box {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  flex-flow: wrap;
+}
+.f-box--left {
+  justify-content: flex-start;
+}
+
+.f-item__mg--small {
+  margin: 0 2rem 0 0;
+}
+
 .header--1 {
   font-family: inherit;
   font-weight: 700;
@@ -12,7 +30,7 @@
   font-family: inherit;
   font-weight: 700;
   font-size: 3rem;
-  color: #dfbc20;
+  color: #fff;
   text-shadow: 0.3rem 0rem 1rem rgba(240, 233, 233, 0.4);
   line-height: 1.3;
 }
@@ -50,8 +68,8 @@
 }
 .section-home {
   width: 80vw;
-  height: 70vh;
-  margin: 20vh 10vw 10vh 10vw;
+  height: 80vh;
+  margin: 15vh 10vw 5vh 10vw;
   display: grid;
   grid-template-rows: 2fr 1fr;
   grid-template-columns: repeat(3, 1fr);
@@ -165,7 +183,7 @@
   transform: translate(7.5rem, -7.5rem);
 }
 .section-home__header {
-  padding: 4rem 0;
+  padding: 1rem 0;
   text-align: left;
   grid-row: 2/3;
   grid-column: 1/4;
@@ -227,6 +245,55 @@
   }
   .section-home .orbit ul li:nth-child(8) {
     transform: translate(9rem, -9rem);
+  }
+}
+@media screen and (min-width: 1268px) {
+  .section-home {
+    gap: 0rem 60rem;
+  }
+  .section-home .orbit {
+    grid-row: 1/3;
+  }
+  .section-home .orbit__img--center {
+    width: 25rem;
+    height: 25rem;
+  }
+  .section-home .orbit ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-5rem, -5rem);
+    list-style: none;
+    animation: orbit 50s linear infinite;
+  }
+  .section-home .orbit ul li {
+    width: 10rem;
+    height: 10rem;
+    aspect-ratio: 1/1;
+  }
+  .section-home .orbit ul li:nth-child(1) {
+    transform: translate(20rem, 0);
+  }
+  .section-home .orbit ul li:nth-child(2) {
+    transform: translate(14rem, 14rem);
+  }
+  .section-home .orbit ul li:nth-child(3) {
+    transform: translate(0rem, 20rem);
+  }
+  .section-home .orbit ul li:nth-child(4) {
+    transform: translate(-14rem, 14rem);
+  }
+  .section-home .orbit ul li:nth-child(5) {
+    transform: translate(-20rem, 0rem);
+  }
+  .section-home .orbit ul li:nth-child(6) {
+    transform: translate(-14rem, -14rem);
+  }
+  .section-home .orbit ul li:nth-child(7) {
+    transform: translate(0rem, -20rem);
+  }
+  .section-home .orbit ul li:nth-child(8) {
+    transform: translate(14rem, -14rem);
   }
 }
 @keyframes orbit {
