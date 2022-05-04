@@ -14,3 +14,7 @@ export const navigationSlice = createSlice({
     },
   },
 })
+
+export const { openLinks, closeLinks } = navigationSlice.actions
+
+export default navigationSlice.reducer

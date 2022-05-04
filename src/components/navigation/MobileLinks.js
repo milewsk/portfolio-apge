@@ -4,6 +4,7 @@ import '../../sass/components/navigation/mobile-links.scss'
 import my_logo from '../../img/logo/main-logo.png'
 import classNames from 'classnames'
 import { useSelector, useDispatch } from 'react-redux'
+import { openLinks, closeLinks } from '../../store/navigation-slice'
 
 const MoblieLinks = (props) => {
   // nie na propsac tylko na store
@@ -15,22 +16,32 @@ const MoblieLinks = (props) => {
     'navigation-mobile__nav--open': linksOpen,
   })
 
-  const closeLinksHandler = () => {}
+  const closeLinksHandler = () => {
+    dispatch(closeLinks())
+  }
 
   return (
     <nav className={active}>
       <ul className="navigation-mobile__list">
         <li className="navigation-mobile__item">
-          <Link to="/home">Start</Link>
+          <Link onClick={closeLinksHandler} to="/home">
+            Start
+          </Link>
         </li>
         <li className="navigation-mobile__item">
-          <Link to="/about">About me</Link>
+          <Link onClick={closeLinksHandler} to="/about">
+            About me
+          </Link>
         </li>
         <li className="navigation-mobile__item">
-          <Link to="/portfolio">Projects</Link>
+          <Link onClick={closeLinksHandler} to="/portfolio">
+            Projects
+          </Link>
         </li>
         <li className="navigation-mobile__item">
-          <Link to="/contact">Contact me</Link>
+          <Link onClick={closeLinksHandler} to="/contact">
+            Contact me
+          </Link>
         </li>
       </ul>
     </nav>

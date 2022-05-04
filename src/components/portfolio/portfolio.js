@@ -15,6 +15,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Loader from 'react-loaders'
 import '../../sass/components/portfolio/portfolio.scss'
 import NavigationBar from '../navigation/NavigationBar'
+import Card from './card'
+import { cardData } from './card-data'
 
 const Portfolio = () => {
   return (
@@ -22,20 +24,11 @@ const Portfolio = () => {
       {/* <NavigationBar></NavigationBar> */}
       <section className="section-portfolio">
         <h2 className="section-portfolio-header header--2">Portfolio</h2>
-        <article className="card">
-          <div className="card__side card__side--front card__side--front--1">
-            <h4 className="card__title header--4">tytuł jeden</h4>
-            <h6 className="card__title--sub header--6">Description</h6>
-            <p className="card__description">
-              ba ba gfdgrbed gbrdgbrdgb gbrdgrdbgbr
-            </p>
-            <button className="btn btn--small btn--transparent btn--absolute">
-              Check more
-            </button>
-          </div>
-          <div className="card__side card_side--back"></div>
-        </article>
+        <Card data={cardData[0]} style="1"></Card>
+        <Card data={cardData[1]} style="2"></Card>
+        <Card data={cardData[2]} style="3"></Card>
       </section>
+      <Loader type="cube-transition"></Loader>
     </Fragment>
   )
 }

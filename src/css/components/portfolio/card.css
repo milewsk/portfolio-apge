@@ -74,28 +74,14 @@
     text-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
   }
 }
-.section-portfolio {
-  max-width: 100vw;
-  margin: 10vh 0rem 0vh 0rem;
-  padding: 3rem 5rem 5vh 5rem;
-  color: #fff;
-  display: grid;
-  grid-auto-flow: row;
-  gap: 5rem;
-  justify-items: center;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  animation-duration: 3s;
-  animation-delay: 1s;
-}
-.section-portfolio .card {
+.card {
   perspective: 1500rem;
   -moz-perspective: 1500rem;
   position: relative;
   width: 100%;
   height: 50rem;
 }
-.section-portfolio .card__side {
+.card__side {
   position: absolute;
   top: 0;
   left: 0;
@@ -107,7 +93,7 @@
   border-radius: 0.3rem;
   box-shadow: 0rem 0.8rem 2rem rgba(0, 0, 0, 0.15);
 }
-.section-portfolio .card__side--front .card__title {
+.card__side--front .card__title {
   position: absolute;
   top: 5%;
   left: 5%;
@@ -117,12 +103,12 @@
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
-.section-portfolio .card__side--front .card__title--sub {
+.card__side--front .card__title--sub {
   position: absolute;
   top: 30%;
   left: 5%;
 }
-.section-portfolio .card__side--front .card__description {
+.card__side--front .card__description {
   max-width: 80%;
   position: absolute;
   top: 40%;
@@ -131,17 +117,23 @@
   font-family: inherit;
   font-size: 1.5rem;
 }
-.section-portfolio .card__side--front .btn--absolute {
+.card__side--front .btn--absolute {
   position: absolute;
   top: 80%;
   left: 50%;
   transform: translateX(-50%);
 }
-.section-portfolio .card__side--front--1 {
+.card__side--front--1 {
   background-image: linear-gradient(180deg, #923d3d 0%, transparent 30%, transparent 100%);
 }
-.section-portfolio .card__side--back {
+.card__side--front--2 {
+  background-image: linear-gradient(180deg, #5caf47 0%, transparent 30%, transparent 100%);
+}
+.card__side--front--3 {
+  background-image: linear-gradient(180deg, #dfbc20 0%, transparent 30%, transparent 100%);
+}
+.card__side--back {
   transform: rotate(-180deg);
 }
 
-/*# sourceMappingURL=portfolio.css.map */
+/*# sourceMappingURL=card.css.map */
