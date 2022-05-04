@@ -11,6 +11,7 @@ import Portfolio from '../portfolio/portfolio'
 const Layout = () => {
   return (
     <Fragment>
+      <NavigationBar></NavigationBar>
       <Routes>
         <Route path="home" element={<Home></Home>}></Route>
         <Route path="about" element={<About></About>}></Route>

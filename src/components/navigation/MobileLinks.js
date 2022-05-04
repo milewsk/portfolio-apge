@@ -3,11 +3,19 @@ import { Link } from 'react-router-dom'
 import '../../sass/components/navigation/mobile-links.scss'
 import my_logo from '../../img/logo/main-logo.png'
 import classNames from 'classnames'
+import { useSelector, useDispatch } from 'react-redux'
 
 const MoblieLinks = (props) => {
+  // nie na propsac tylko na store
+  const dispatch = useDispatch()
+
+  const linksOpen = useSelector((state) => state.navigation.areLinksOpen)
+
   const active = classNames('navigation-mobile__nav', {
-    'navigation-mobile__nav--open': props.open,
+    'navigation-mobile__nav--open': linksOpen,
   })
+
+  const closeLinksHandler = () => {}
 
   return (
     <nav className={active}>

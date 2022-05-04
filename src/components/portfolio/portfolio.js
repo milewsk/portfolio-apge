@@ -19,7 +19,7 @@ import NavigationBar from '../navigation/NavigationBar'
 const Portfolio = () => {
   return (
     <Fragment>
-      <NavigationBar></NavigationBar>
+      {/* <NavigationBar></NavigationBar> */}
       <section className="section-portfolio">
         <h2 className="section-portfolio-header header--2">Portfolio</h2>
         <article className="card">
