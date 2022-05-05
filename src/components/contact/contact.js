@@ -45,7 +45,6 @@ const Contact = () => {
 
   return (
     <Fragment>
-      <NavigationBar></NavigationBar>
       <section className="section-contact">
         <div className="section-contact__box">
           <h2 className="section-contact__header">Contact me</h2>

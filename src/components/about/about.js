@@ -15,7 +15,6 @@ import NavigationBar from '../navigation/NavigationBar'
 const About = () => {
   return (
     <Fragment>
-      <NavigationBar></NavigationBar>
       <section className="section-about">
         <h2 className="section-about__header header--2">Know me better</h2>
         <article className="section-about__article article--1">
