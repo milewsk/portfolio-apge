@@ -24,9 +24,9 @@ const Portfolio = () => {
       {/* <NavigationBar></NavigationBar> */}
       <section className="section-portfolio">
         <h2 className="section-portfolio-header header--2">Portfolio</h2>
-        <Card data={cardData[0]} style="1"></Card>
-        <Card data={cardData[1]} style="2"></Card>
-        <Card data={cardData[2]} style="3"></Card>
+        <Card cardData={cardData[0]} style="1"></Card>
+        <Card cardData={cardData[1]} style="2"></Card>
+        <Card cardData={cardData[2]} style="3"></Card>
       </section>
       <Loader type="cube-transition"></Loader>
     </Fragment>

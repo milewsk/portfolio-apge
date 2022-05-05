@@ -48,6 +48,8 @@
         position: absolute;
         top: 30%;
         left: 5%;
+
+        font-size: 2.2rem;
       }
 
       .card__description {
@@ -58,7 +60,8 @@
 
         color: $color-paragrafs;
         font-family: inherit;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        line-height: 1.3;
       }
 
       .btn--absolute {
@@ -72,8 +75,8 @@
         background-image: linear-gradient(
           180deg,
           rgba(rgb(146, 61, 61), 1) 0%,
-          transparent 30%,
-          transparent 100%
+          rgba($color-background-nav, 1) 30%,
+          rgba($color-background-nav, 1) 100%
         );
       }
       &--2 {
@@ -95,7 +98,38 @@
       }
     }
     &--back {
-      transform: rotate(-180deg);
+      transform: rotateY(-180deg);
+
+      &--1 {
+        background-image: linear-gradient(
+          105deg,
+          rgba(rgb(146, 61, 61), 1) 0%,
+          rgba(rgb(121, 47, 47), 1) 100%
+        );
+      }
+      &--2 {
+        background-image: linear-gradient(
+          180deg,
+          rgba(rgb(92, 175, 71), 1) 0%,
+          rgba(rgb(63, 136, 45), 1) 100%
+        );
+      }
+
+      &--3 {
+        background-image: linear-gradient(
+          180deg,
+          rgba($color-headings, 1) 0%,
+          rgba($color-headings-dark, 1) 100%
+        );
+      }
     }
   }
+}
+
+.rotateY__0 {
+  transform: rotateY(0deg);
+}
+
+.rotateY__180 {
+  transform: rotateY(-180deg);
 }

@@ -4,23 +4,33 @@ import classNames from 'classnames'
 import '../../sass/components/portfolio/card.scss'
 
 const Card = (props) => {
-  const [isRotated, setIsRotated] = useState()
+  const [isRotated, setIsRotated] = useState(false)
 
-  const activeFront = classNames()
-  const activeBack = classNames()
+  console.log(props.cardData)
+  console.log(props.style)
+  const activeFront = classNames(
+    'card__side',
+    'card__side--front',
+    `card__side--front--${props.style}`,
+    { rotateY__180: isRotated }
+  )
+  const activeBack = classNames(
+    'card__side',
+    'card__side--back',
+    `card__side--back--${props.style}`,
+    { rotateY__0: isRotated }
+  )
 
-  const rotateHandler = () => {}
+  const rotateHandler = () => {
+    setIsRotated((isRotated) => !isRotated)
+  }
 
   return (
     <article className="card">
-      <div
-        className={`card__side card__side--front card__side--front--${props.style}`}
-      >
-        <h4 className="card__title header--4">tytuł jeden</h4>
+      <div className={activeFront}>
+        <h4 className="card__title header--4">{props.cardData.title}</h4>
         <h6 className="card__title--sub header--6">Description</h6>
-        <p className="card__description">
-          ba ba gfdgrbed gbrdgbrdgb gbrdgrdbgbr
-        </p>
+        <p className="card__description">{props.cardData.description}</p>
         <button
           onClick={rotateHandler}
           className="btn btn--small btn--transparent btn--absolute"
@@ -28,12 +38,9 @@ const Card = (props) => {
           Check more
         </button>
       </div>
-      <div className="card__side card_side--back">
-        <h4 className="card__title header--4">tytuł jeden</h4>
-        <h6 className="card__title--sub header--6">Description</h6>
-        <p className="card__description">
-          ba ba gfdgrbed gbrdgbrdgb gbrdgrdbgbr
-        </p>
+      <div className={activeBack}>
+        <h6 className="card__title--sub header--6">Technologies used</h6>
+        <p className="card__stack"></p>
         <button
           onClick={rotateHandler}
           className="btn btn--small btn--transparent btn--absolute"
