@@ -5,7 +5,7 @@ import my_logo from '../../img/logo/main-logo.png'
 import classNames from 'classnames'
 import MoblieLinks from './MobileLinks'
 import { useSelector, useDispatch } from 'react-redux'
-import { openLinks } from '../../store/navigation-slice'
+import { openLinks, closeLinks } from '../../store/navigation-slice'
 
 const MobileNavigation = () => {
   const dispatch = useDispatch()
@@ -18,7 +18,11 @@ const MobileNavigation = () => {
 
   // reverse state
   const openMobileNavHandler = () => {
-    dispatch(openLinks())
+    if (linksOpen) {
+      dispatch(closeLinks())
+    } else {
+      dispatch(openLinks())
+    }
   }
 
   return (

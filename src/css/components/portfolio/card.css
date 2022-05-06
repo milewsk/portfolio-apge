@@ -107,7 +107,7 @@
   position: absolute;
   top: 30%;
   left: 5%;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
 }
 .card__side--front .card__description {
   max-width: 80%;
@@ -116,8 +116,9 @@
   left: 5%;
   color: rgba(240, 233, 233, 0.952);
   font-family: inherit;
-  font-size: 1.8rem;
-  line-height: 1.3;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.4;
 }
 .card__side--front .btn--absolute {
   position: absolute;
@@ -137,6 +138,41 @@
 .card__side--back {
   transform: rotateY(-180deg);
 }
+.card__side--back .card-back__header {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 2.4rem;
+}
+.card__side--back .card__stack {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+.card__side--back .card__stack p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.card__side--back .btn--absolute {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.card__side--back .card__link-container {
+  width: 50%;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__side--back .card__link-container .card__link {
+  font-size: 5rem;
+}
 .card__side--back--1 {
   background-image: linear-gradient(105deg, #923d3d 0%, #792f2f 100%);
 }
@@ -147,6 +183,11 @@
   background-image: linear-gradient(180deg, #dfbc20 0%, #b99c1c 100%);
 }
 
+@media screen and (min-width: 500px) {
+  .card {
+    width: 80%;
+  }
+}
 .rotateY__0 {
   transform: rotateY(0deg);
 }

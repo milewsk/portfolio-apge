@@ -89,4 +89,17 @@
   animation-delay: 1s;
 }
 
+@media screen and (min-width: 768px) {
+  .section-portfolio {
+    margin: 13vh 0rem 0vh 0rem;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "header header header" "one two three";
+  }
+  .section-portfolio-header {
+    grid-area: header;
+  }
+}
+
 /*# sourceMappingURL=portfolio.css.map */
