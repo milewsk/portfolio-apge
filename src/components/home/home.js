@@ -20,7 +20,7 @@ import photo_Konrad from '../../img/photo-konrad.jpg'
 const Home = () => {
   return (
     <Fragment>
-      <NavigationBar></NavigationBar>
+      
       <section className="section-home">
         <div className="orbit">
           <div className="orbit__img--center">
